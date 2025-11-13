@@ -35,16 +35,16 @@ export function NavMenu() {
       description: 'Browse botanical knowledge and resources',
     },
     {
-      title: 'Your Herbarium',
-      href: '/your-herbarium',
-      icon: Sprout,
-      description: 'View and manage your plant collection',
-    },
-    {
       title: 'Care Guides',
       href: '/care-guides',
       icon: BookOpen,
       description: 'Detailed guides for plant care',
+    },
+    {
+      title: 'Your Herbarium',
+      href: '/your-herbarium',
+      icon: Sprout,
+      description: 'View and manage your plant collection',
     },
   ];
 

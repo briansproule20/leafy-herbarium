@@ -1,5 +1,9 @@
+'use client';
+
 import Link from 'next/link';
 import Image from 'next/image';
+import { BookOpen, Sprout, Sparkles } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 export default function HomePage() {
   return (
@@ -35,8 +39,8 @@ export default function HomePage() {
           <div className="space-y-8 animate-fade-in-up">
             {/* Decorative top line */}
             <div className="flex items-center gap-4">
-              <div className="h-px w-12 bg-gradient-to-r from-transparent to-emerald-800" />
-              <span className="font-serif text-emerald-950 text-xs uppercase tracking-[0.3em] font-semibold drop-shadow-[0_1px_2px_rgba(255,255,255,0.8)]">
+              <div className="h-px w-12 bg-gradient-to-r from-transparent to-stone-700" />
+              <span className="font-serif text-stone-700 text-xs uppercase tracking-[0.3em] font-semibold">
                 Est. 2025
               </span>
             </div>
@@ -85,25 +89,6 @@ export default function HomePage() {
               </Link>
             </div>
 
-            {/* Feature tags */}
-            <div className="grid grid-cols-2 gap-3 pt-8 max-w-md animate-fade-in-up-delay-4">
-              {['Plant ID', 'Care Guides', 'Growth Tracking', 'Community'].map((tag, i) => (
-                <div
-                  key={tag}
-                  className="relative bg-gradient-to-br from-amber-100 via-amber-50 to-stone-100 px-6 py-2 shadow-md border border-amber-900/20 transform hover:scale-105 transition-transform duration-200"
-                  style={{
-                    animationDelay: `${1200 + i * 100}ms`,
-                    rotate: `${i % 2 === 0 ? '-1deg' : '1deg'}`
-                  }}
-                >
-                  {/* Parchment texture overlay */}
-                  <div className="absolute inset-0 opacity-20 mix-blend-multiply bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZmlsdGVyIGlkPSJub2lzZSI+PGZlVHVyYnVsZW5jZSB0eXBlPSJmcmFjdGFsTm9pc2UiIGJhc2VGcmVxdWVuY3k9IjAuOSIgbnVtT2N0YXZlcz0iNCIgLz48L2ZpbHRlcj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWx0ZXI9InVybCgjbm9pc2UpIiAvPjwvc3ZnPg==')]" />
-                  <span className="relative font-serif text-emerald-950 text-sm font-semibold tracking-wide">
-                    {tag}
-                  </span>
-                </div>
-              ))}
-            </div>
           </div>
 
           {/* Right Column - Image/Illustration */}
@@ -131,43 +116,74 @@ export default function HomePage() {
         </div>
 
         {/* Features Section */}
-        <div className="grid gap-8 sm:grid-cols-3 mt-32 pb-20 animate-fade-in-up-delay-5">
+        <div className="grid gap-8 sm:grid-cols-3 mt-32 pb-20">
           {[
             {
               title: 'Botanical Knowledge',
               desc: 'Access centuries of plant wisdom, reimagined for modern plant parents.',
-              icon: '🌿'
+              Icon: BookOpen,
+              href: '/library'
             },
             {
               title: 'Personal Herbarium',
               desc: 'Document your collection with field notes and growth observations.',
-              icon: '📖'
+              Icon: Sprout,
+              href: '/your-herbarium'
             },
             {
               title: 'AI Plant Care',
               desc: 'Get instant answers to your plant questions from our AI botanist.',
-              icon: '✨'
+              Icon: Sparkles,
+              href: '/'
             }
-          ].map((feature, i) => (
-            <div
-              key={feature.title}
-              className="group relative p-8 bg-gradient-to-br from-amber-50/50 to-stone-100/50 border border-emerald-900/20 backdrop-blur-sm hover:border-emerald-900/40 transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
-              style={{ animationDelay: `${1600 + i * 150}ms` }}
-            >
-              <div className="text-5xl mb-4 transform transition-transform duration-300 group-hover:scale-110">
-                {feature.icon}
-              </div>
-              <h3 className="font-serif text-2xl text-emerald-950 mb-3">
-                {feature.title}
-              </h3>
-              <p className="font-serif text-stone-700 leading-relaxed">
-                {feature.desc}
-              </p>
+          ].map((feature, i) => {
+            const Icon = feature.Icon;
+            return (
+              <motion.div
+                key={feature.title}
+                initial={{ opacity: 0, y: 60, rotateX: -15 }}
+                animate={{ opacity: 1, y: 0, rotateX: 0 }}
+                transition={{
+                  duration: 0.9,
+                  delay: 1.6 + i * 0.2,
+                  ease: [0.22, 1, 0.36, 1]
+                }}
+                whileHover={{
+                  y: -8,
+                  scale: 1.02,
+                  transition: { duration: 0.3, ease: [0.22, 1, 0.36, 1] }
+                }}
+                className="group"
+              >
+                <Link
+                  href={feature.href}
+                  className="block relative p-8 bg-gradient-to-br from-amber-50/50 to-stone-100/50 border border-emerald-900/20 backdrop-blur-sm hover:border-emerald-900/40 transition-all duration-300 hover:shadow-xl h-full"
+                >
+                  <motion.div
+                    className="mb-4"
+                    initial={{ scale: 0.8, opacity: 0 }}
+                    animate={{ scale: 1, opacity: 1 }}
+                    transition={{
+                      duration: 0.6,
+                      delay: 1.8 + i * 0.2,
+                      ease: [0.34, 1.56, 0.64, 1]
+                    }}
+                  >
+                    <Icon className="h-12 w-12 text-emerald-900 transition-transform duration-300 group-hover:scale-110" strokeWidth={1.5} />
+                  </motion.div>
+                  <h3 className="font-serif text-2xl text-emerald-950 mb-3">
+                    {feature.title}
+                  </h3>
+                  <p className="font-serif text-stone-700 leading-relaxed">
+                    {feature.desc}
+                  </p>
 
-              {/* Decorative corner accent */}
-              <div className="absolute top-0 right-0 w-8 h-8 border-t-2 border-r-2 border-emerald-900/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-            </div>
-          ))}
+                  {/* Decorative corner accent */}
+                  <div className="absolute top-0 right-0 w-8 h-8 border-t-2 border-r-2 border-emerald-900/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                </Link>
+              </motion.div>
+            );
+          })}
         </div>
       </div>
 
