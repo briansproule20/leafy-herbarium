@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { Menu, Home, MessageSquare } from 'lucide-react';
+import { Menu, Home, MessageSquare, Library, BookOpen, Sprout } from 'lucide-react';
 import {
   Sheet,
   SheetContent,
@@ -27,6 +27,24 @@ export function NavMenu() {
       href: '/',
       icon: MessageSquare,
       description: 'Ask questions about your plants',
+    },
+    {
+      title: 'Library',
+      href: '/library',
+      icon: Library,
+      description: 'Browse botanical knowledge and resources',
+    },
+    {
+      title: 'Your Herbarium',
+      href: '/your-herbarium',
+      icon: Sprout,
+      description: 'View and manage your plant collection',
+    },
+    {
+      title: 'Care Guides',
+      href: '/care-guides',
+      icon: BookOpen,
+      description: 'Detailed guides for plant care',
     },
   ];
 

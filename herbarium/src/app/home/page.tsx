@@ -74,13 +74,13 @@ export default function HomePage() {
               </Link>
 
               <Link
-                href="/about"
+                href="/library"
                 className="group relative bg-gradient-to-br from-amber-100 via-amber-50 to-stone-100 px-8 py-4 shadow-lg border border-amber-900/20 hover:scale-105 transition-all duration-200 hover:shadow-xl overflow-hidden"
               >
                 {/* Parchment texture overlay */}
                 <div className="absolute inset-0 opacity-20 mix-blend-multiply bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZmlsdGVyIGlkPSJub2lzZSI+PGZlVHVyYnVsZW5jZSB0eXBlPSJmcmFjdGFsTm9pc2UiIGJhc2VGcmVxdWVuY3k9IjAuOSIgbnVtT2N0YXZlcz0iNCIgLz48L2ZpbHRlcj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWx0ZXI9InVybCgjbm9pc2UpIiAvPjwvc3ZnPg==')]" />
                 <span className="relative font-serif text-emerald-950 text-lg font-semibold tracking-wide">
-                  Learn More →
+                  Browse Library →
                 </span>
               </Link>
             </div>
@@ -107,7 +107,7 @@ export default function HomePage() {
           </div>
 
           {/* Right Column - Image/Illustration */}
-          <div className="relative animate-fade-in-scale">
+          <div className="relative animate-fade-in-scale self-start">
             <div className="relative aspect-square max-w-lg mx-auto">
               <Image
                 src="/herbarium trans favicon.png"
