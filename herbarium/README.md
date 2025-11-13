@@ -243,3 +243,209 @@ Make sure to update your Echo app configuration with your production domain.
 ---
 
 Built with ❤️ using [Echo](https://echo.merit.systems) - The simplest way to build AI applications with built-in billing and user management.
+
+
+Roadmap: 
+1. Core Plant Management
+1.1. Plant Inventory (The Specimen Archive)
+Add plants manually, by photo, or via AI recognition
+Auto-fetch species information (light, water, humidity, toxicity, etc.)
+Assign custom names & scientific names
+Generate unique accession IDs (Herbarium-style catalog numbers)
+Assign plants to locations (Living Room, Office, South Window, etc.)
+
+1.2. Specimen Sheets (Plant Profile Pages)
+Each plant gets a layout styled like a botanical herbarium sheet:
+High-res plant image at top
+Scientific classification (family, genus, species)
+Origin or acquisition date
+Growth status indicator
+Notes section with academic-style formatting
+Environmental needs at a glance (icons)
+
+1.3. Photo Gallery
+Per-plant photo stream
+Auto-sorting by date
+Before/after slider for growth comparison
+Optional “pressed plant” monochrome photo filter for fun
+
+2. Care & Maintenance Tracking
+2.1. Watering & Fertilizing Logs
+Track last watering with timestamps
+Recurring schedules based on species needs
+Fertilizer type, amount, and frequency
+Soil moisture notes
+Notifications (“Specimen #019 overdue for hydration by 3 days”)
+
+2.2. Repotting History
+Current pot size, medium, and soil type
+Previous pot sizes & dates
+Repot reminders based on growth rate
+“New roots visible” quick-log option
+
+2.3. Pruning & Propagation
+Log pruning events
+Track propagation cuttings and their growth
+Attach photos of clippings and roots
+
+2.4. Health Condition Tracking
+Log issues (yellow leaves, wilt, pests)
+Severity scale
+AI-assisted diagnoses with suggested actions
+Track resolution over time
+
+3. Environmental Intelligence
+3.1. Light Mapping
+Assign each plant’s location to a room
+Rate sunlight intensity (manual or AI vision)
+Suggest better placements based on species
+Track seasonal light changes for windows
+
+3.2. Seasonal Almanac
+Monthly care recommendations
+Winter dormancy mode
+Summer heat & burn warnings
+Local climate adjustments (optional user input)
+
+3.3. Movement History
+Track when a plant is moved from one location to another
+Compare health before/after moves
+
+4. Growth Analytics
+4.1. Growth Timeline
+Daily, weekly, or monthly logs
+Height measurements
+Leaf count
+Milestones (new leaf, flowering)
+
+4.2. AI Growth Insights
+“Your specimen is showing a 14% increase in leaf mass over the last month.”
+Detect stunted growth patterns
+Highlight optimal conditions based on past logs
+
+4.3. Photo-to-Metrics Extraction
+AI estimates leaf count
+AI detects new growth
+AI compares shape & color over time
+
+5. AI Botanical Assistant
+5.1. General Assistant
+A calm, academic botanical voice:
+Species info
+Care recommendations
+Troubleshooting
+Seasonal advice
+“Suggest best placement”
+Soil type recommendations
+
+5.2. Per-Plant Chat Mode
+Talk to each plant, or about each plant:
+“How’s my monstera doing this week?”
+“Why are its leaves curling?”
+“Which window should I move it to?”
+“Write a care plan for the next 30 days.”
+
+5.3. Academic Persona Mode
+Assistant tone mimics:
+A herbarium archivist
+A botanical field researcher
+A calm naturalist
+No cutesy plant personalities unless you want a toggle for that.
+
+6. Field Guide Features
+6.1. Personal “Flora of My Home” Guide
+Auto-generated digital book:
+Sorted by genus/family
+Sorted by room
+Sorted by care difficulty
+Beautiful printable PDF export
+
+6.2. Specimen Labels
+Create physical labels for your actual pots:
+QR code linking to the plant profile
+Accession number
+Scientific name
+Room location
+Light/water needs
+
+6.3. Botanical Encyclopedia Mode
+A searchable plant database:
+Common houseplants
+Toxicity info (pets!)
+Propagation complexity
+Blooming seasons
+
+7. Task Automation
+7.1. Automated Care Schedule
+Based on species:
+Watering intervals
+Fertilizer cycles
+Seasonal adjustments
+“Do this soon” alerts
+
+7.2. Smart Reminders
+Push notifications (or in-app badges):
+Watering
+Repotting
+Fertilizing
+Rotate plant for even growth
+Check for pests during high-risk seasons
+
+7.3. Plant Dashboard
+One overall view:
+Plants needing attention
+At-risk plants
+Healthy plants
+Recently updated logs
+
+8. Advanced Tools
+8.1. Light & Temperature Logging (optional future hardware tie-in)
+Integrate with sensor devices (if ever)
+Track room climate over time
+Correlate plant health with environment
+
+8.2. Import/Export
+Export all data to CSV/JSON
+Backup / restore
+Data portability for longtime collectors
+
+8.3. Room Mapping
+Upload a photo of your room
+Add markers showing plant positions
+AI suggests better spots
+
+9. UX & Aesthetic Elements (Field Guide Edition)
+9.1. Branding
+Vintage botanical illustration style
+Off-white paper textures
+Deep leaf-green ink
+Fine linework icons
+Serif headers + clean sans-serif body
+
+9.2. UI Layout
+Specimen sheet layout
+Archival card UI for lists
+Ink-stamp accents (subtle)
+Minimal, elegant, academic
+
+9.3. OG + App Icon
+Pressed-leaf silhouette
+Botanical circle emblem
+Index-card style favicon
+
+10. Nice-to-Have Extras (Future Expansions)
+10.1. Plant Trading / Sharing
+Share pages with friends who also have the app.
+
+10.2. Plant Social Feed
+Share growth logs / milestones (optional private-only version).
+
+10.3. Community Field Guide
+Users can contribute their own species finds.
+
+10.4. Garden Mode
+If you ever expand outdoors:
+garden beds
+vegetable plots
+plant guilds
+companion planting matrix
