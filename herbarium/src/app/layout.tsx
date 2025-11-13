@@ -52,11 +52,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${crimsonText.variable} ${lora.variable} ${geistMono.variable} flex h-screen flex-col antialiased`}
+        className={`${crimsonText.variable} ${lora.variable} ${geistMono.variable} flex h-screen flex-col antialiased relative`}
       >
         <Providers>
           <Header title="Herbarium Fieldguide" />
-          <div className="min-h-0 flex-1">{children}</div>
+          <div className="min-h-0 flex-1 relative">{children}</div>
         </Providers>
       </body>
     </html>
