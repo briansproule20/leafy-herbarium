@@ -1,0 +1,14 @@
+# Dependencies
+node_modules/
+package-lock.json
+
+# Claude AI
+.claude/
+
+# OS files
+.DS_Store
+
+# Root level config files (from mistaken Vite setup)
+package.json
+tsconfig.json
+
